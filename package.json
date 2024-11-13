@@ -1,0 +1,23 @@
+{
+  "name": "semvr-v2",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "nodemon": "^3.1.7",
+    "prisma": "^5.22.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "@napi-rs/canvas": "^0.1.61",
+    "@prisma/client": "5.11.0",
+    "undici": "^6.21.0"
+  }
+}

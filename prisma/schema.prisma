@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Welcomer {
+    id            String    @id @default(uuid())
+    server_id     String    @unique
+    server_name   String
+    channel       String?
+    message       String?
+    image         String?
+    greeting      String?
+    greeting_msg  String?
+    color         String?
+    shadow        Boolean?  @default(true)
+    enabled       Boolean  @default(true)
+}
+
+model Leave {
+    id            String    @id @default(uuid())
+    server_id     String    @unique
+    server_name   String
+    channel       String?
+    message       String?
+    image         String?
+    greeting      String?
+    greeting_msg  String?
+    color         String?
+    shadow        Boolean?  @default(true)
+    enabled       Boolean  @default(true)
+}
+
+model Verify {
+    id            String  @id @default(uuid())
+    message_id    String
+    role_id       String
+    message_after String
+  }
